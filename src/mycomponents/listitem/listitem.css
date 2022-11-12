@@ -1,0 +1,38 @@
+.todoflexxrow {
+  display: flex;
+  padding: 10px 20px;
+  /* border: 2px solid green; */
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0px;
+  color: purple;
+  flex-wrap: wrap;
+  font-size: x-large;
+}
+
+.delbtn {
+  color: purple;
+  cursor: pointer;
+}
+.delbtn:hover {
+  color: red;
+}
+
+@media screen and (max-width: 500px) {
+  .delbtn {
+    font-size: large;
+  }
+  .todoflexxrow {
+    font-size: larger;
+    padding: 5px 20px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .delbtn {
+    font-size: medium;
+  }
+  .todoflexxrow {
+    font-size: large;
+  }
+}

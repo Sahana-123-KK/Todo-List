@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import List from "./mycomponents/List/List";
+import ListItem from "./mycomponents/listitem/ListItem";
 
 function App() {
+  const [list, setList] = useState([]);
+
+  const getList = (list) => {
+    setList(list);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={list.length >= 8 ? "listcontainerbig" : "listcontainer"}>
+      {/* <ListItem/> */}
+      <List get={getList} />
     </div>
   );
 }
